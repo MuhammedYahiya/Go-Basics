@@ -48,7 +48,7 @@ func main() {
 
 	//Creating slice with make
 
-	highScores := make([]int, 4)
+	highScores := make([]int, 4) //make([]type, length, capacity)
 	highScores[0] = 234
 	highScores[1] = 947
 	highScores[2] = 465
@@ -62,5 +62,11 @@ func main() {
 	fmt.Println(highScores)
 	//check the elements are sorted
 	fmt.Println(sort.IntsAreSorted(highScores))
+
+	//append second array using spread operator
+	var intSlice1 []int32 = []int32{4, 5, 6}
+	var intSlice2 []int32 = []int32{8, 9}
+	intSlice1 = append(intSlice1, intSlice2...)
+	fmt.Println(intSlice1)
 
 }
